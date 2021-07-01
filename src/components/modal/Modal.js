@@ -33,18 +33,17 @@ class Modal extends Component {
   this.props.taggleModal();
  };
 
- //  state = { isModalOpen: false };
- //  taggleModal = () => {
- //   this.setState((prevState) => ({ isModalOpen: !prevState.isModalOpen }));
- //  };
  render() {
-  console.log(this.props);
   const modalRoot = document.querySelector("#modal-root");
   return createPortal(
    <ModalStyled className="Overlay" onClick={this.handleBackdropClick}>
     <div className="Modal">
      {this.props.children}
-     <button type="button" onClick={this.props.taggleModal}>
+     <button
+      type="button"
+      className="closeModal"
+      onClick={this.props.taggleModal}
+     >
       Close-modal
      </button>
     </div>
@@ -59,3 +58,9 @@ const mapDispatchToProps = {
 };
 
 export default connect(null, mapDispatchToProps)(Modal);
+
+//=================Withaut-Redax-App========================
+//  state = { isModalOpen: false };
+//  taggleModal = () => {
+//   this.setState((prevState) => ({ isModalOpen: !prevState.isModalOpen }));
+//  };

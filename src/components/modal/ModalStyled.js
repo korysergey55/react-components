@@ -18,4 +18,12 @@ export const ModalStyled = styled.div`
   padding: 15px;
   background-color: white;
  }
+ .closeModal {
+  margin-top: 20px;
+
+  :hover {
+   color: white;
+   background-color: red;
+  }
+ }
 `;
