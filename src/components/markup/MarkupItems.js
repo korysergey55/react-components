@@ -27,18 +27,17 @@ const MarkupItem = ({ newItems, handleDelete }) => {
  );
 };
 
-// const getNormolize = (state) => {
-//  const formattedContacts = state.contacts.filter.toLowerCase().trim();
-//  const filteredContacts = state.contacts.items.filter((contact) =>
-//   contact.name.toLowerCase().includes(formattedContacts)
-//  );
-//  return filteredContacts;
-// };
+const filterItems = (state) => {
+ const formattedState = state.filter.query.toLowerCase().trim();
+ const filtered = state.form.items.filter((contact) =>
+  contact.name.toLowerCase().includes(formattedState)
+ );
+ return filtered;
+};
 
 const mapStateToProps = (state, ownProps) => ({
- //  newItems: getNormolize(state.formAddItems.items),
- newItems: state.formAddItems.items,
-});
+ newItems: filterItems(state),
+ });
 
 const mapDispatchToProps = {
  handleDelete,

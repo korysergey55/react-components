@@ -27,6 +27,6 @@ const modalReducer = createReducer(
  }
 );
 const taggleModalReducer = combineReducers({
- modal: modalReducer,
+ isModalOpen: modalReducer,
 });
 export default taggleModalReducer;

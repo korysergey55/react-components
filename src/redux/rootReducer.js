@@ -2,10 +2,12 @@
 import { combineReducers } from "redux";
 import taggleModalReducer from "./modal/ModalReducer";
 import formAddReducer from './formAdd/FormAddReducer';
+import filterReducer from "./filter/FilterReducer";
 
 const rootReducer = combineReducers({
- taggleModal: taggleModalReducer,
- formAddItems: formAddReducer,
+ modal: taggleModalReducer,
+ form: formAddReducer,
+ filter: filterReducer,
 });
 
 export default rootReducer;

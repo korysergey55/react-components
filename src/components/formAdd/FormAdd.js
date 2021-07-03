@@ -93,7 +93,7 @@ class FormAdd extends Component {
  }
 }
 const mapStateToProps = (state, ownProps) => ({
- newItems: state.formAddItems.items,
+ newItems: state.form.items,
 });
 
 const mapDispatchToProps = {

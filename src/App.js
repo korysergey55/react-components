@@ -5,7 +5,8 @@ import ButtonSVG from "./components/buttonSVG/ButtonSVG";
 import { ReactComponent as IconApple } from "./icons/iconmac.svg";
 import ContactForm from "./components/formAdd/FormAdd";
 import MarkupItems from "./components/markup/MarkupItems";
-import Loader from './components/loader/Loader';
+import Loader from "./components/loader/Loader";
+import Filter from "./components/filter/filter";
 
 import { connect } from "react-redux";
 import { taggleModal } from "./redux/modal/ModalActions";
@@ -24,19 +25,20 @@ class App extends Component {
       <ContactForm />
      </Modal>
     )}
-    
+
     <Clock />
     <ButtonSVG />
     <IconApple width="40" height="40" fill="blue" display="block" />
     <MarkupItems />
-    <Loader/>
+    <Loader />
+    <Filter />
    </>
   );
  }
 }
 
 const mapStateToProps = (state, ownProps) => ({
- isModalOpen: state.taggleModal.modal,
+ isModalOpen: state.modal.isModalOpen,
 });
 
 const mapDispatchToProps = {
