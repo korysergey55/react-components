@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Clock from "./components/clock/Clock";
 import Modal from "./components/modal/Modal";
 import ButtonSVG from "./components/buttonSVG/ButtonSVG";
-import { ReactComponent as IconApple } from "./icons/iconmac.svg";
+import IconSVG from './components/iconSVG/IconSVG';
 import ContactForm from "./components/formAdd/FormAdd";
 import MarkupItems from "./components/markup/MarkupItems";
 import Loader from "./components/loader/Loader";
@@ -16,8 +16,8 @@ class App extends Component {
   return (
    <>
     <button type="button" onClick={this.props.taggleModal}>
-     Add-markup
-     <IconApple width="20" height="20" fill="blue" />
+     open-modal
+     <IconSVG/>
     </button>
 
     {this.props.isModalOpen && (
@@ -28,7 +28,7 @@ class App extends Component {
 
     <Clock />
     <ButtonSVG />
-    <IconApple width="40" height="40" fill="blue" display="block" />
+    <IconSVG/>
     <MarkupItems />
     <Loader />
     <Filter />
