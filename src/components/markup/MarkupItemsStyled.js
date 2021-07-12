@@ -5,17 +5,23 @@ export const MarkupItemStyledContainer = styled.div`
  margin: 0 auto;
  padding: 10px;
 
+ .ulContainer {
+  padding: 0;
+ }
  .newContact {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 20px;
   font-weight: 500;
   text-align: center;
-  border: 1px solid black;
   list-style: none;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  background-color: rgb(111, 111, 250);
  }
  .newContactName {
   display: inline-block;
-  color: blue;
+  color: white;
   margin-right: 20px;
  }
  .btn {

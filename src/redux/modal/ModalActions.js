@@ -8,6 +8,8 @@
 //=======================Redux-Toolkit===============================
 
 import { createAction } from "@reduxjs/toolkit";
+
 const taggleModal = createAction("modal/taggleModal");
+
 export { taggleModal };
 

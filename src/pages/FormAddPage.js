@@ -7,8 +7,8 @@ const FormAddPage = () => {
  return (
   <>
    <FormAdd />
-   <MarkupItems />
    <Filter />
+   <MarkupItems />
   </>
  );
 };

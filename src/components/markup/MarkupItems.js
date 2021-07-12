@@ -3,6 +3,7 @@ import { MarkupItemStyledContainer } from "./MarkupItemsStyled";
 import { connect } from "react-redux";
 
 import { handleDelete } from "../../redux/formAdd/FormAddActions";
+import { getfilteredSelector } from "../../redux/filter/FilterSelectors";
 
 const MarkupItem = ({ newItems, handleDelete }) => {
  return (
@@ -27,17 +28,9 @@ const MarkupItem = ({ newItems, handleDelete }) => {
  );
 };
 
-const filterItems = (state) => {
- const formattedState = state.filter.query.toLowerCase().trim();
- const filtered = state.form.items.filter((contact) =>
-  contact.name.toLowerCase().includes(formattedState)
- );
- return filtered;
-};
-
 const mapStateToProps = (state, ownProps) => ({
- newItems: filterItems(state),
- });
+ newItems: getfilteredSelector(state),
+});
 
 const mapDispatchToProps = {
  handleDelete,

@@ -1,50 +1,29 @@
 import React, { Component } from "react";
 import Header from "./components/header/Header";
-import Clock from "./components/clock/Clock";
-import Modal from "./components/modal/Modal";
-import ButtonSVG from "./components/buttonSVG/ButtonSVG";
-import IconSVG from "./components/iconSVG/IconSVG";
-import ContactForm from "./components/formAdd/FormAdd";
-import MarkupItems from "./components/markup/MarkupItems";
-import Loader from "./components/loader/Loader";
-import Filter from "./components/filter/Filter";
 
-import { connect } from "react-redux";
-import { taggleModal } from "./redux/modal/ModalActions";
+import { mainRouts } from "./routs/mainRouter";
+import { Route, Switch } from "react-router-dom";
 
 class App extends Component {
  render() {
   return (
    <>
     <Header />
-    <button type="button" onClick={this.props.taggleModal}>
-     open-modal
-     <IconSVG />
-    </button>
-
-    {this.props.isModalOpen && (
-     <Modal>
-      <ContactForm />
-     </Modal>
-    )}
-
-    <Clock />
-    <ButtonSVG />
-    <IconSVG />
-    <MarkupItems />
-    <Loader />
-    <Filter />
+    <Switch>
+     {mainRouts.map((route) => (
+      <Route
+       path={route.path}
+       exact={route.exact}
+       component={route.component}
+       isRegistered={route.isRegistered}
+       isPrivate={route.isPrivate}
+       key={route.name}
+      />
+     ))}
+    </Switch>
    </>
   );
  }
 }
 
-const mapStateToProps = (state, ownProps) => ({
- isModalOpen: state.modal.isModalOpen,
-});
-
-const mapDispatchToProps = {
- taggleModal,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

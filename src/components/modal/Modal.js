@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { ModalStyled } from "./ModalStyled";
 import { createPortal } from "react-dom";
 
@@ -7,10 +6,6 @@ import { connect } from "react-redux";
 import { taggleModal } from "../../redux/modal/ModalActions";
 
 class Modal extends Component {
- static propTypes = {
-  taggleModal: PropTypes.func.isRequired,
- };
-
  componentDidMount() {
   window.addEventListener("keydown", this.handleEsc);
   const body = document.querySelector("body");
@@ -52,14 +47,36 @@ class Modal extends Component {
   );
  }
 }
+const mapStateToProps = (state, ownProps) => ({});
 
 const mapDispatchToProps = {
  taggleModal,
 };
 
-export default connect(null, mapDispatchToProps)(Modal);
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);
 
-//=================Withaut-Redax-App========================
+//=================insert-in-component========================//
+
+// import Modal from "./components/modal/Modal";
+// import { connect } from "react-redux";
+// import { taggleModal } from "./redux/modal/ModalActions";
+
+//<button type="button" onClick={this.props.taggleModal}>
+// Open-modal
+//</button>;
+//{ this.props.isModalOpen && <Modal />}
+
+
+// const mapStateToProps = (state, ownProps) => ({
+//  isModalOpen: state.modal.isModalOpen,
+// });
+
+// const mapDispatchToProps = {
+//  taggleModal,
+// };
+// export default connect(mapStateToProps, mapDispatchToProps)(....);
+
+//=================Withaut-Redax-App========================//
 //  state = { isModalOpen: false };
 //  taggleModal = () => {
 //   this.setState((prevState) => ({ isModalOpen: !prevState.isModalOpen }));

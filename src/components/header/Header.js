@@ -7,21 +7,24 @@ const Header = ({ location }) => {
  return (
   <>
    <HeaderConteinerStyled>
-    {mainRouts.map(
-     ({ name, path, exact, isLink }) =>
-      isLink && (
-       <li  key ={path}>
-        <NavLink
-         to={path}
-         exact={exact}
-         className="NavLink"
-         activeClassName="NavLinkActiv"
-        >
-         {name}
-        </NavLink>
-       </li>
-      )
-    )}
+    <ul className="NavLinkUl">
+     {mainRouts.map(
+      (route) =>
+       route.isLink && (
+        <li key={route.path}>
+         <NavLink
+          to={route.path}
+          exact={route.exact}
+          route={route}
+          className="NavLink"
+          activeClassName="NavLinkActiv"
+         >
+          {route.name}
+         </NavLink>
+        </li>
+       )
+     )}
+    </ul>
    </HeaderConteinerStyled>
   </>
  );

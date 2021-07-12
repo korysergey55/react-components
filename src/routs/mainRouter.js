@@ -5,13 +5,17 @@ import HomePage from "../pages/HomePage";
 import IconSVGPage from "../pages/IconSVGPage";
 import LoaderPage from "../pages/LoaderPage";
 import ModalPage from "../pages/ModalPage";
+import AuthPage from "../pages/AuthPage";
+
 export const mainRouts = [
  {
-  name: "home",
+  name: "Home",
   path: "/home",
   exact: true,
   component: HomePage,
   isLink: true,
+  isRegistered: false,
+  isPrivate: false,
  },
  {
   name: "ButtonSVG",
@@ -19,6 +23,8 @@ export const mainRouts = [
   exact: true,
   component: ButtonSVGPage,
   isLink: true,
+  isRegistered: false,
+  isPrivate: false,
  },
  {
   name: "IconSVG",
@@ -26,6 +32,8 @@ export const mainRouts = [
   exact: true,
   component: IconSVGPage,
   isLink: true,
+  isRegistered: false,
+  isPrivate: false,
  },
  {
   name: "Clock",
@@ -33,6 +41,8 @@ export const mainRouts = [
   exact: true,
   component: ClockPage,
   isLink: true,
+  isRegistered: false,
+  isPrivate: false,
  },
  {
   name: "LoaderPage",
@@ -40,6 +50,8 @@ export const mainRouts = [
   exact: true,
   component: LoaderPage,
   isLink: true,
+  isRegistered: false,
+  isPrivate: false,
  },
  {
   name: "FormAddPage",
@@ -47,6 +59,8 @@ export const mainRouts = [
   exact: true,
   component: FormAddPage,
   isLink: true,
+  isRegistered: false,
+  isPrivate: false,
  },
  {
   name: "ModalPage",
@@ -54,5 +68,25 @@ export const mainRouts = [
   exact: true,
   component: ModalPage,
   isLink: true,
+  isRegistered: false,
+  isPrivate: true,
+ },
+ {
+  name: "Registration",
+  path: "/registration",
+  exact: true,
+  component: AuthPage,
+  isLink: true,
+  isRegistered: true,
+  isPrivate: false,
+ },
+ {
+  name: "Login",
+  path: "/login",
+  exact: true,
+  component: AuthPage,
+  isLink: true,
+  isRegistered: false,
+  isPrivate: false,
  },
 ];

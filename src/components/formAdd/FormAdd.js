@@ -44,7 +44,7 @@ class FormAdd extends Component {
   if (this.findDuplicate(this.state.name)) {
    this.props.submitNewItem({ ...this.state, id: uuid() });
    this.resetForm();
-   this.props.taggleModal();
+//    this.props.taggleModal();
   }
  };
 
@@ -98,7 +98,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = {
  submitNewItem,
- taggleModal,
+//  taggleModal,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FormAdd);
