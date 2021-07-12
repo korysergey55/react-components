@@ -6,6 +6,7 @@ import IconSVGPage from "../pages/IconSVGPage";
 import LoaderPage from "../pages/LoaderPage";
 import ModalPage from "../pages/ModalPage";
 import AuthPage from "../pages/AuthPage";
+import FormikPage from "../pages/FormikPage";
 
 export const mainRouts = [
  {
@@ -14,8 +15,8 @@ export const mainRouts = [
   exact: true,
   component: HomePage,
   isLink: true,
-  isRegistered: false,
   isPrivate: false,
+  isRegistered: false,
  },
  {
   name: "ButtonSVG",
@@ -23,8 +24,8 @@ export const mainRouts = [
   exact: true,
   component: ButtonSVGPage,
   isLink: true,
-  isRegistered: false,
   isPrivate: false,
+  isRegistered: false,
  },
  {
   name: "IconSVG",
@@ -32,8 +33,8 @@ export const mainRouts = [
   exact: true,
   component: IconSVGPage,
   isLink: true,
-  isRegistered: false,
   isPrivate: false,
+  isRegistered: false,
  },
  {
   name: "Clock",
@@ -41,8 +42,8 @@ export const mainRouts = [
   exact: true,
   component: ClockPage,
   isLink: true,
-  isRegistered: false,
   isPrivate: false,
+  isRegistered: false,
  },
  {
   name: "LoaderPage",
@@ -50,8 +51,8 @@ export const mainRouts = [
   exact: true,
   component: LoaderPage,
   isLink: true,
-  isRegistered: false,
   isPrivate: false,
+  isRegistered: false,
  },
  {
   name: "FormAddPage",
@@ -59,8 +60,8 @@ export const mainRouts = [
   exact: true,
   component: FormAddPage,
   isLink: true,
-  isRegistered: false,
   isPrivate: false,
+  isRegistered: false,
  },
  {
   name: "ModalPage",
@@ -68,8 +69,17 @@ export const mainRouts = [
   exact: true,
   component: ModalPage,
   isLink: true,
-  isRegistered: false,
   isPrivate: true,
+  isRegistered: false,
+ },
+ {
+  name: "Formik",
+  path: "/formik",
+  exact: true,
+  component: FormikPage,
+  isLink: true,
+  isPrivate: true,
+  isRegistered: false,
  },
  {
   name: "Registration",
@@ -77,8 +87,8 @@ export const mainRouts = [
   exact: true,
   component: AuthPage,
   isLink: true,
-  isRegistered: true,
   isPrivate: false,
+  isRegistered: true,
  },
  {
   name: "Login",
@@ -86,7 +96,7 @@ export const mainRouts = [
   exact: true,
   component: AuthPage,
   isLink: true,
-  isRegistered: false,
   isPrivate: false,
+  isRegistered: true,
  },
 ];

@@ -16,7 +16,8 @@ export const registrationUserOperation = (formState) => async (dispatch) => {
  try {
   const response = await registrationUserApi(formState);
 
-  dispatch(registerUserAction(response.data));
+  dispatch(registerUserAction(response));
+  alert("You was secsesful Registrated. Login please");
  } catch (error) {
   dispatch(registerUserActionError(error));
  }

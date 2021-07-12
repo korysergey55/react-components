@@ -28,7 +28,7 @@ export const logoutApi = async (inputFormState) => {
  try {
   axios.defaults.headers.Authorization = ``;
   const response = await axios.post(`${BASE_URL}/users/logout`, {
-   inputFormState,
+   ...inputFormState,
   });
   return response;
  } catch (error) {
