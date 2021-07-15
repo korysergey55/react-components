@@ -1,8 +1,8 @@
 import React from 'react';
-import Formik from '../components/formik/Formik';
+import FormikComponent from "../components/formik/Formik";
 
 const FormikPage = () => {
-    return <Formik/>
+    return <FormikComponent />;
 }
 
 export default FormikPage;

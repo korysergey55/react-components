@@ -24,12 +24,10 @@ export const loginUserApi = async (inputFormState) => {
  }
 };
 
-export const logoutApi = async (inputFormState) => {
+export const logoutApi = async (authToken) => {
+ axios.defaults.headers.common["Authorization"] = `Bearer ${authToken}`;
  try {
-  axios.defaults.headers.Authorization = ``;
-  const response = await axios.post(`${BASE_URL}/users/logout`, {
-   ...inputFormState,
-  });
+  const response = await axios.post(`${BASE_URL}/users/logout`);
   return response;
  } catch (error) {
   console.log(error);

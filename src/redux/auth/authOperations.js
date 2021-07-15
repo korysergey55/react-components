@@ -32,9 +32,10 @@ export const loginUserOperation = (formState) => async (dispatch) => {
  }
 };
 
-export const logoutUserOperation = (formState) => async (dispatch) => {
+export const logoutUserOperation = () => async (dispatch, getState) => {
+ const authToken = getState().auth.token;
  try {
-  const response = await logoutApi(formState);
+  const response = await logoutApi(authToken);
   dispatch(logoutUserAction(response.data));
  } catch (error) {
   dispatch(logoutUserActionError(error));

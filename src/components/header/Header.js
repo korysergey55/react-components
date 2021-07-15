@@ -5,6 +5,7 @@ import { ReactComponent as Icon } from "../../icons/avatar.svg";
 import HeaderItem from "./headerItem/HeaderItem";
 import { mainRouts } from "../../routs/mainRouter";
 import { NavLink } from "react-router-dom";
+
 import { useDispatch, useSelector } from "react-redux";
 import { authTokenSelector } from "../../redux/auth/authSelector";
 import { logoutUserOperation } from "../../redux/auth/authOperations";
@@ -23,7 +24,10 @@ const Header = () => {
      )}
      {authToken && (
       <>
-       <li className="nawLink" onClick={logoutUserOperation}>
+       <li
+        className="nawLink"
+        onClick={() => dispatch(logoutUserOperation())}
+       >
         <NavLink to="/logout" className="NavLink">
          <Icon width="40" height="40" />
          <span>LogOut</span>

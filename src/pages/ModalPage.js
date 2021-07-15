@@ -10,7 +10,7 @@ const ModalPage = () => {
  const dispatch = useDispatch();
  return (
   <>
-   <button type="button" onClick={dispatch(taggleModal)}>
+   <button type="button" onClick={()=> dispatch(taggleModal())}>
     Open-modal
    </button>
    {!isModalOpen && <Modal></Modal>}
