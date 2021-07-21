@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./module/HomePageStyled.module.css";
 
 const HomePage = () => {
  return (
-  <>
-   <h2>Home Page</h2>
-  </>
+  <div className={styles.homePageContainer}>
+   <h2 className={styles.title}>Home Page</h2>
+  </div>
  );
 };
 

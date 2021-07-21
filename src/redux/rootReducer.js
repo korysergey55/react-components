@@ -16,13 +16,11 @@ const persistItemConfig = {
  storage,
  whitelist: ["item"],
 };
-
 const persistAuthConfig = {
  key: "auth",
  storage,
  whitelist: ["auth"],
 };
-
 const persistFormikConfig = {
     key: 'formik',
     storage,

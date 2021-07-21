@@ -1,9 +1,11 @@
 import React from 'react';
 import IconSVG from '../components/iconSVG/IconSVG';
-
+import styles from './module/IconSVGPageStyled.module.css';
 const IconSVGPage = () => {
     return (
-        <IconSVG/>
+     <div className={styles.containerIconSVGPage}>
+      <IconSVG />
+     </div>
     );
 }
 

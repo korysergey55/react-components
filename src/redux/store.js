@@ -4,7 +4,6 @@
 // import rootReducer from './rootReducer';
 // const store = createStore(rootReducer, composeWithDevTools());
 // export default store;
-
 //=======================Redux-Toolkit===============================
 
 import rootReducer from './rootReducer';
@@ -19,4 +18,3 @@ export default store;
 
 // ----------persist-----------------//
 persistStore(store);
-// ---------------------------//

@@ -1,0 +1,10 @@
+.containerClockPage {
+ display: block;
+ min-width: 100%;
+ min-height: 100%;
+ height: 100vw;
+ padding: 20px;
+ background-image: url(../../images/galary.jpg);
+ background-repeat: no-repeat;
+ background-size: contain;
+}
