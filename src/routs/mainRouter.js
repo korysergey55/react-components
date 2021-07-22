@@ -46,7 +46,7 @@ export const mainRouts = [
   isRegistered: false,
  },
  {
-  name: "LoaderPage",
+  name: "Loader",
   path: "/loader",
   exact: true,
   component: LoaderPage,
@@ -55,16 +55,16 @@ export const mainRouts = [
   isRegistered: false,
  },
  {
-  name: "FormAddPage",
+  name: "FormAdd",
   path: "/formAdd",
   exact: true,
   component: FormAddPage,
   isLink: true,
-  isPrivate: false,
+  isPrivate: true,
   isRegistered: false,
  },
  {
-  name: "ModalPage",
+  name: "Modal",
   path: "/modal",
   exact: true,
   component: ModalPage,

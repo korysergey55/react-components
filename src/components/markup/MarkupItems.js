@@ -2,14 +2,14 @@ import React from "react";
 import { MarkupItemStyledContainer } from "./MarkupItemsStyled";
 import { connect } from "react-redux";
 
-import { handleDelete } from "../../redux/formAdd/FormAddActions";
 import { getfilteredSelector } from "../../redux/filter/FilterSelectors";
+import { deleteContactOperation } from "../../redux/formAdd/FormAddOperations";
 
-const MarkupItem = ({ newItems, handleDelete }) => {
+const MarkupItem = ({ newItems, deleteContactOperation }) => {
  return (
   <MarkupItemStyledContainer>
    <ul>
-    {newItems.map((item) => (
+    {newItems?.map((item) => (
      <li className="newContact" key={item.id}>
       <p className="newContactName">
        {item.name} : {item.number}
@@ -17,7 +17,7 @@ const MarkupItem = ({ newItems, handleDelete }) => {
       <button
        type="button"
        className="btn"
-       onClick={() => handleDelete(item.id)}
+       onClick={() => deleteContactOperation(item.id)}
       >
        Delete
       </button>
@@ -33,7 +33,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = {
- handleDelete,
+ deleteContactOperation,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MarkupItem);

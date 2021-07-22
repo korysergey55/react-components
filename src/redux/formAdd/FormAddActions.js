@@ -1,4 +1,9 @@
 import { createAction } from "@reduxjs/toolkit";
-const submitNewItem = createAction("formAdd/submitNewItem");
-const handleDelete = createAction("contact/handleDelete");
-export { submitNewItem, handleDelete };
+export const submitNewItem = createAction("formAdd/submitNewItem");
+export const submitNewItemError = createAction("formAdd/submitNewItemError");
+
+export const getAllContacts = createAction("formAdd/getAllContacts");
+export const getAllContnactsError = createAction("formAdd/getAllContnactsError");
+
+export const handleDelete = createAction("contact/handleDelete");
+export const handleDeleteError = createAction("formAdd/handleDeleteError");

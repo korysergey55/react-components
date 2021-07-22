@@ -5,7 +5,6 @@ import {
  registrationUserOperation,
  loginUserOperation,
 } from "../../redux/auth/authOperations";
-
 import { connect } from "react-redux";
 
 class AuthForm extends Component {
@@ -70,9 +69,7 @@ class AuthForm extends Component {
   );
  }
 }
-const mapStateToProps = (state, ownProps) => ({
-  
-});
+const mapStateToProps = (state, ownProps) => ({});
 
 const mapDispatchToProps = {
  registrationUserOperation,

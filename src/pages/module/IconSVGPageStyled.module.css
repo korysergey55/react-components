@@ -6,5 +6,5 @@
  padding: 20px;
  background-image: url(../../images/galary2.jpg);
  background-repeat: no-repeat;
- background-size: contain;
+ background-size: cover;
 }

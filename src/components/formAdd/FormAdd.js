@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import { v4 as uuid } from "uuid";
-import PropTypes from "prop-types";
 import { FormAddStyledContainer } from "./FormAddStuled";
 
 import { connect } from "react-redux";
-import { taggleModal } from "../../redux/modal/ModalActions";
 import { submitNewItem } from "../../redux/formAdd/FormAddActions";
+import {
+ getAllContactsOperation,
+ addNewContactOperation,
+} from "../../redux/formAdd/FormAddOperations";
 
 class FormAdd extends Component {
- static propTypes = {
-  submitNewItem: PropTypes.func.isRequired,
- };
-
  state = {
   name: "",
   number: "",
  };
 
+ componentDidMount() {
+  this.props.token && this.props.getAllContactsOperation();
+ }
  saveInputValueToState = (evt) => {
   this.setState({
    [evt.target.name]: evt.target.value,
@@ -25,7 +25,7 @@ class FormAdd extends Component {
 
  findDuplicate = (item) => {
   const isDublicate = this.props.newItems.some(
-   (contact) => contact.name === item
+   (contact) => contact?.name === item
   );
   if (!item) {
    alert("The field cannot be empty!");
@@ -40,11 +40,10 @@ class FormAdd extends Component {
 
  handleSubmitForm = (evt) => {
   evt.preventDefault();
-
   if (this.findDuplicate(this.state.name)) {
-   this.props.submitNewItem({ ...this.state, id: uuid() });
+   //  this.props.submitNewItem({ ...this.state });
+   this.props.addNewContactOperation({ ...this.state });
    this.resetForm();
-//    this.props.taggleModal();
   }
  };
 
@@ -87,6 +86,9 @@ class FormAdd extends Component {
      <button type="submit" className="buttonAddContact">
       Add contact
      </button>
+     <p className="qantytyContacts">
+      My contacts: {this.props.newItems.length}
+     </p>
     </form>
    </FormAddStyledContainer>
   );
@@ -94,11 +96,13 @@ class FormAdd extends Component {
 }
 const mapStateToProps = (state, ownProps) => ({
  newItems: state.form.items,
+ token: state.auth.token,
 });
 
 const mapDispatchToProps = {
  submitNewItem,
-//  taggleModal,
+ getAllContactsOperation,
+ addNewContactOperation,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FormAdd);
@@ -120,4 +124,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(FormAdd);
 //    return { newItems: newContact };
 //   });
 //  };
-//=================Withaut-Redax-App========================

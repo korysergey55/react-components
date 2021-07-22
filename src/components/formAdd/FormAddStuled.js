@@ -46,4 +46,10 @@ export const FormAddStyledContainer = styled.div`
   background-color: rgb(26, 243, 26);
   color: black;
  }
+ .qantytyContacts {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+ }
 `;
