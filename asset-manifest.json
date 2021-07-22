@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/react-components/static/css/main.7f70f03e.chunk.css",
-    "main.js": "/react-components/static/js/main.a1167075.chunk.js",
-    "main.js.map": "/react-components/static/js/main.a1167075.chunk.js.map",
+    "main.css": "/react-components/static/css/main.0edef75d.chunk.css",
+    "main.js": "/react-components/static/js/main.3c96bc43.chunk.js",
+    "main.js.map": "/react-components/static/js/main.3c96bc43.chunk.js.map",
     "runtime-main.js": "/react-components/static/js/runtime-main.e59a39f9.js",
     "runtime-main.js.map": "/react-components/static/js/runtime-main.e59a39f9.js.map",
-    "static/js/2.72f0678f.chunk.js": "/react-components/static/js/2.72f0678f.chunk.js",
-    "static/js/2.72f0678f.chunk.js.map": "/react-components/static/js/2.72f0678f.chunk.js.map",
+    "static/js/2.7d721630.chunk.js": "/react-components/static/js/2.7d721630.chunk.js",
+    "static/js/2.7d721630.chunk.js.map": "/react-components/static/js/2.7d721630.chunk.js.map",
     "index.html": "/react-components/index.html",
-    "static/css/main.7f70f03e.chunk.css.map": "/react-components/static/css/main.7f70f03e.chunk.css.map",
-    "static/js/2.72f0678f.chunk.js.LICENSE.txt": "/react-components/static/js/2.72f0678f.chunk.js.LICENSE.txt",
+    "static/css/main.0edef75d.chunk.css.map": "/react-components/static/css/main.0edef75d.chunk.css.map",
+    "static/js/2.7d721630.chunk.js.LICENSE.txt": "/react-components/static/js/2.7d721630.chunk.js.LICENSE.txt",
     "static/media/avatar.48fc0a30.svg": "/react-components/static/media/avatar.48fc0a30.svg",
+    "static/media/HomePageStyled.module.css": "/react-components/static/media/bg-1.4af74e55.jpg",
+    "static/media/ButtonSVGPageStyled.module.css": "/react-components/static/media/calary2.1a6b7705.jpg",
+    "static/media/ClockPageStyled.module.css": "/react-components/static/media/galary.77f684b7.jpg",
+    "static/media/IconSVGPageStyled.module.css": "/react-components/static/media/galary2.354f2794.jpg",
     "static/media/iconmac.036839bc.svg": "/react-components/static/media/iconmac.036839bc.svg",
+    "static/media/LoaderPageStyled.module.css": "/react-components/static/media/mercedes.872d8736.jpg",
+    "static/media/FormAddPageStyled.module.css": "/react-components/static/media/phonebook.28f73a3d.jpg",
     "static/media/sprite.33ebf099.svg": "/react-components/static/media/sprite.33ebf099.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e59a39f9.js",
-    "static/js/2.72f0678f.chunk.js",
-    "static/css/main.7f70f03e.chunk.css",
-    "static/js/main.a1167075.chunk.js"
+    "static/js/2.7d721630.chunk.js",
+    "static/css/main.0edef75d.chunk.css",
+    "static/js/main.3c96bc43.chunk.js"
   ]
 }
