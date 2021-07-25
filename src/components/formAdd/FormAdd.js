@@ -24,7 +24,7 @@ class FormAdd extends Component {
  };
 
  findDuplicate = (item) => {
-  const isDublicate = this.props.newItems.some(
+  const isDublicate = this.props.newItems.find(
    (contact) => contact?.name === item
   );
   if (!item) {

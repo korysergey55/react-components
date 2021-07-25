@@ -1,9 +1,9 @@
-
- componentDidMount() {
+//  ============================Locale-Storege=====================================//
+componentDidMount() {
   const items = localStorage.getItem("contacts");
   const parsedContacts = JSON.parse(items);
-  
-  if (parsedContacts) {
+
+    if (parsedContacts) {
    this.setState({ contacts: parsedContacts });
   }
  }
@@ -40,8 +40,7 @@ handleSubmitForm = (evt) => {
   }
   return true;
  };
-
- //  ============================NormolizeContacts=====================================//
+//  ============================NormolizeContacts=====================================//
 
 const getNormolizeContacts = (state) => {
  const formattedContacts = state.contacts.filter.toLowerCase().trim();

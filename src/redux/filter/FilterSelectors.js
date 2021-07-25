@@ -5,10 +5,8 @@ export const filterSelector = (state) => state.filter?.query;
 
 export const getfilteredSelector = createSelector(
  [formSelector, filterSelector],
- (items, filter) =>
-  items?.filter((item) =>
-   item.name.toLowerCase().includes(filter.toLowerCase())
-  )
+ (items, query) =>
+  items?.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
 );
 
 // const getFilterItems = (state) => {

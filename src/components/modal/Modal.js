@@ -17,14 +17,15 @@ class Modal extends Component {
   body.style.overflow = "auto";
  }
 
- handleEsc = (e) => {
-  if (e.code === "Escape") {
+ handleEsc = (evt) => {
+  if (evt.code === "Escape") {
    this.props.taggleModal();
   }
  };
 
- handleBackdropClick = (e) => {
-  if (e.target !== e.currentTarget) return;
+ handleBackdropClick = (evt) => {
+     if (evt.target !== evt.currentTarget)
+         return;
   this.props.taggleModal();
  };
 
@@ -65,7 +66,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(Modal);
 // Open-modal
 //</button>;
 //{ this.props.isModalOpen && <Modal />}
-
 
 // const mapStateToProps = (state, ownProps) => ({
 //  isModalOpen: state.modal.isModalOpen,
