@@ -18,4 +18,9 @@ export const HeaderConteinerStyled = styled.div`
  .NavLinkActiv {
   color: red;
  }
+ .userName{
+     font-size: 20px;
+     font-weight: 500;
+     color: green;
+ }
 `;

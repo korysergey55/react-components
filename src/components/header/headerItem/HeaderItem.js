@@ -6,11 +6,10 @@ const HeaderItem = ({ route, authToken }) => {
  return (
   <>
    {!route.isPrivate && !route.isRegistered && (
-    <li key={route.path}>
+    <li>
      <NavLink
       to={route.path}
       exact={route.exact}
-      route={route}
       className="NavLink"
       activeClassName="NavLinkActiv"
      >
@@ -24,7 +23,6 @@ const HeaderItem = ({ route, authToken }) => {
      <NavLink
       to={route.path}
       exact={route.exact}
-      route={route}
       className="NavLink"
       activeClassName="NavLinkActiv"
      >
@@ -37,7 +35,6 @@ const HeaderItem = ({ route, authToken }) => {
      <NavLink
       to={route.path}
       exact={route.exact}
-      route={route}
       className="NavLink"
       activeClassName="NavLinkActiv"
      >

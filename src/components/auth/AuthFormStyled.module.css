@@ -5,8 +5,7 @@
  align-items: center;
  min-width: 500px;
  min-height: 300px;
- border: 1px solid blue;
-}
+ }
 .labelName {
  margin-bottom: 20px;
  font-size: 20px;

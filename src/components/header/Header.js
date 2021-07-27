@@ -7,11 +7,12 @@ import { mainRouts } from "../../routs/mainRouter";
 import { NavLink } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import { authTokenSelector } from "../../redux/auth/authSelector";
+import { authTokenSelector, userSelector } from "../../redux/auth/authSelector";
 import { logoutUserOperation } from "../../redux/auth/authOperations";
 
 const Header = () => {
  const authToken = useSelector(authTokenSelector);
+ const user = useSelector(userSelector);
  const dispatch = useDispatch();
 
  return (
@@ -20,15 +21,15 @@ const Header = () => {
     <ul className="NavLinkUl">
      {mainRouts.map(
       (route) =>
-       route.isLink && <HeaderItem route={route} authToken={authToken} />
+       route.isLink && (
+        <HeaderItem route={route} authToken={authToken} key={route.path} />
+       )
      )}
      {authToken && (
       <>
-       <li
-        className="nawLink"
-        onClick={() => dispatch(logoutUserOperation())}
-       >
-        <NavLink to="/logout" className="NavLink">
+       <li className="nawLink" onClick={() => dispatch(logoutUserOperation())}>
+        <NavLink to="/home" className="NavLink">
+         <span className="userName">{user.name}</span>
          <Icon width="40" height="40" />
          <span>LogOut</span>
         </NavLink>

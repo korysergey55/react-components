@@ -7,12 +7,13 @@ import LoaderPage from "../pages/LoaderPage";
 import ModalPage from "../pages/ModalPage";
 import AuthPage from "../pages/AuthPage";
 import FormikPage from "../pages/FormikPage";
+import NotFoundComponent from "./NotFoundComponent";
 
 export const mainRouts = [
  {
   name: "Home",
   path: "/home",
-  exact: true,
+  exact: false,
   component: HomePage,
   isLink: true,
   isPrivate: false,
@@ -98,5 +99,13 @@ export const mainRouts = [
   isLink: true,
   isPrivate: false,
   isRegistered: true,
+ },
+ {
+  name: "notFound",
+  exact: true,
+  component: NotFoundComponent,
+  isLink: false,
+  isPrivate: false,
+  isRegistered: false,
  },
 ];

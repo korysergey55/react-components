@@ -27,7 +27,7 @@ class AuthForm extends Component {
  };
 
  handleLicenceChange = (evt) => {
-  const isCheckbox = evt.target.type === "checkbox";
+  // const isCheckbox = evt.target.type === "checkbox";
   //  this.setState({
   //   licence: isCheckbox ? evt.target.checked : evt.target.value,
   //  });
@@ -48,8 +48,8 @@ class AuthForm extends Component {
       email: this.state.email,
       password: this.state.password,
      });
-  this.reset();
   this.props.history.push("/login");
+  this.reset();
  };
 
  reset = () => {
@@ -158,6 +158,7 @@ class AuthForm extends Component {
         name="licence"
         onChange={this.handleLicenceChange}
         checked={this.state.licence}
+        required
        />
        Соглашаюсь с условиями
       </label>

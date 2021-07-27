@@ -18,20 +18,20 @@ const App = () => {
     {mainRouts.map((route) =>
      route.isPrivate ? (
       <PrivateRoute
+       key={route.component}
        path={route.path}
        exact={route.exact}
        isRegistered={route.isRegistered}
        component={route.component}
-       key={route.path}
        authToken={authToken}
       />
      ) : (
       <PublicRoute
+       key={route.component}
        path={route.path}
        exact={route.exact}
        component={route.component}
        isRegistered={route.isRegistered}
-       key={route.path}
        authToken={authToken}
       />
      )
