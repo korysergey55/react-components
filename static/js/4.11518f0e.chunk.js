@@ -1,0 +1,2 @@
+(this.webpackJsonpcomponents=this.webpackJsonpcomponents||[]).push([[4],{276:function(s,t,e){"use strict";e.r(t);e(0);var c=e(1);t.default=function(){return Object(c.jsxs)(c.Fragment,{children:[Object(c.jsx)("h2",{className:"seaTitle",children:"Egept"}),Object(c.jsx)("img",{src:"https://media.istockphoto.com/photos/balloons-for-diving-picture-id882405942?s=2048x2048",alt:"egept",className:"seaImg"})]})}}}]);
+//# sourceMappingURL=4.11518f0e.chunk.js.map

@@ -1,0 +1,2 @@
+(this.webpackJsonpcomponents=this.webpackJsonpcomponents||[]).push([[0],{277:function(s,t,e){"use strict";e.r(t);e(0);var c=e(1);t.default=function(){return Object(c.jsxs)(c.Fragment,{children:[Object(c.jsx)("h2",{className:"seaTitle",children:"Turkish"}),Object(c.jsx)("img",{src:"https://cdn.pixabay.com/photo/2015/08/26/13/39/istanbul-908510_960_720.jpg",alt:"Turkish",className:"seaImg"})]})}}}]);
+//# sourceMappingURL=0.67245112.chunk.js.map

@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/react-components/static/css/main.a877e206.chunk.css",
-    "main.js": "/react-components/static/js/main.19461754.chunk.js",
-    "main.js.map": "/react-components/static/js/main.19461754.chunk.js.map",
-    "runtime-main.js": "/react-components/static/js/runtime-main.e59a39f9.js",
-    "runtime-main.js.map": "/react-components/static/js/runtime-main.e59a39f9.js.map",
-    "static/js/2.46d66f2a.chunk.js": "/react-components/static/js/2.46d66f2a.chunk.js",
-    "static/js/2.46d66f2a.chunk.js.map": "/react-components/static/js/2.46d66f2a.chunk.js.map",
+    "static/js/0.67245112.chunk.js": "/react-components/static/js/0.67245112.chunk.js",
+    "static/js/0.67245112.chunk.js.map": "/react-components/static/js/0.67245112.chunk.js.map",
+    "main.css": "/react-components/static/css/main.9ea1f4ca.chunk.css",
+    "main.js": "/react-components/static/js/main.d6b62f92.chunk.js",
+    "main.js.map": "/react-components/static/js/main.d6b62f92.chunk.js.map",
+    "runtime-main.js": "/react-components/static/js/runtime-main.04b688d4.js",
+    "runtime-main.js.map": "/react-components/static/js/runtime-main.04b688d4.js.map",
+    "static/js/3.96cf83bf.chunk.js": "/react-components/static/js/3.96cf83bf.chunk.js",
+    "static/js/3.96cf83bf.chunk.js.map": "/react-components/static/js/3.96cf83bf.chunk.js.map",
+    "static/js/4.11518f0e.chunk.js": "/react-components/static/js/4.11518f0e.chunk.js",
+    "static/js/4.11518f0e.chunk.js.map": "/react-components/static/js/4.11518f0e.chunk.js.map",
     "index.html": "/react-components/index.html",
-    "static/css/main.a877e206.chunk.css.map": "/react-components/static/css/main.a877e206.chunk.css.map",
-    "static/js/2.46d66f2a.chunk.js.LICENSE.txt": "/react-components/static/js/2.46d66f2a.chunk.js.LICENSE.txt",
+    "static/css/main.9ea1f4ca.chunk.css.map": "/react-components/static/css/main.9ea1f4ca.chunk.css.map",
+    "static/js/3.96cf83bf.chunk.js.LICENSE.txt": "/react-components/static/js/3.96cf83bf.chunk.js.LICENSE.txt",
     "static/media/avatar.48fc0a30.svg": "/react-components/static/media/avatar.48fc0a30.svg",
     "static/media/ButtonSVGPageStyled.module.css": "/react-components/static/media/calary2.1a6b7705.jpg",
     "static/media/ClockPageStyled.module.css": "/react-components/static/media/galary.77f684b7.jpg",
@@ -21,9 +25,9 @@
     "static/media/sprite.33ebf099.svg": "/react-components/static/media/sprite.33ebf099.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e59a39f9.js",
-    "static/js/2.46d66f2a.chunk.js",
-    "static/css/main.a877e206.chunk.css",
-    "static/js/main.19461754.chunk.js"
+    "static/js/runtime-main.04b688d4.js",
+    "static/js/3.96cf83bf.chunk.js",
+    "static/css/main.9ea1f4ca.chunk.css",
+    "static/js/main.d6b62f92.chunk.js"
   ]
 }
