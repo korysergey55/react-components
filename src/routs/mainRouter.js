@@ -2,6 +2,7 @@ import ButtonSVGPage from "../pages/ButtonSVGPage";
 import ClockPage from "../pages/ClockPage";
 import FormAddPage from "../pages/FormAddPage";
 import HomePage from "../pages/HomePage";
+import HomeDeteilsPage from "../pages/HomeDeteilsPage";
 import IconSVGPage from "../pages/IconSVGPage";
 import LoaderPage from "../pages/LoaderPage";
 import ModalPage from "../pages/ModalPage";
@@ -16,6 +17,15 @@ export const mainRouts = [
   exact: false,
   component: HomePage,
   isLink: true,
+  isPrivate: false,
+  isRegistered: false,
+ },
+ {
+  name: "HomeDeteils",
+  path: "/home/:country",
+  exact: true,
+  component: HomeDeteilsPage,
+  isLink: false,
   isPrivate: false,
   isRegistered: false,
  },

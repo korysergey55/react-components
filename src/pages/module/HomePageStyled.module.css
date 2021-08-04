@@ -23,9 +23,11 @@
  font-weight: 700;
  text-decoration: none;
  color: black;
+ text-shadow: 2px 2px 3px #ecffd1;
 }
 .NavLinkActiv {
  color: red;
+ text-shadow: 2px 2px 3px #ecffd1;
 }
 .goBack {
  display: block;
@@ -33,8 +35,8 @@
  min-width: 100px;
  height: 30px;
  border-radius: 7px;
+ background-color: rgb(169, 252, 2);
 }
 .goBack:hover {
- background-color: rgb(169, 252, 2);
   cursor: pointer;
 }

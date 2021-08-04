@@ -4,17 +4,29 @@
 // import rootReducer from './rootReducer';
 // const store = createStore(rootReducer, composeWithDevTools());
 // export default store;
+
 //=======================Redux-Toolkit===============================
+import rootReducer from "./rootReducer";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { persistStore } from "redux-persist";
+import {
+ FLUSH,
+ PAUSE,
+ PERSIST,
+ PURGE,
+ REGISTER,
+ REHYDRATE,
+} from "redux-persist/es/constants";
 
-import rootReducer from './rootReducer';
-import { configureStore } from "@reduxjs/toolkit";
+const middleware = [
+ ...getDefaultMiddleware({
+  serializableCheck: {
+   ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+  },
+ }),
+];
 
-// ----------persist-----------------//
-import { persistStore } from 'redux-persist';
-// ---------------------------//
+const store = configureStore({ reducer: rootReducer, middleware });
+const persistor = persistStore(store);
 
-const store = configureStore({ reducer: rootReducer });
-export default store;
-
-// ----------persist-----------------//
-persistStore(store);
+export { store, persistor };

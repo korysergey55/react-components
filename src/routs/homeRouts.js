@@ -1,13 +1,14 @@
-import Egept from "../components/sea/Egept";
-import Grece from "../components/sea/Grece";
-import Turkish from "../components/sea/Turkish";
+import {lazy} from 'react';
+// import Egept from "../components/sea/Egept";
+// import Grece from "../components/sea/Grece";
+// import Turkish from "../components/sea/Turkish";
 
 export const homeRouts = [
  {
   name: "Egept",
   path: "/egept",
   exact: true,
-  component: Egept,
+  component: lazy(() => import("../components/sea/Egept")),
   isLink: true,
   isPrivate: false,
   isRegistered: false,
@@ -16,7 +17,7 @@ export const homeRouts = [
   name: "Turkish",
   path: "/turkish",
   exact: true,
-  component: Turkish,
+  component: lazy(() => import("../components/sea/Turkish")),
   isLink: true,
   isPrivate: false,
   isRegistered: false,
@@ -24,8 +25,8 @@ export const homeRouts = [
  {
   name: "Grece",
   path: "/grece",
-  exact: false,
-  component: Grece,
+  exact: true,
+  component: lazy(() => import("../components/sea/Turkish")),
   isLink: true,
   isPrivate: false,
   isRegistered: false,

@@ -39,16 +39,22 @@ class AuthForm extends Component {
  onHandleSubmit = (event) => {
   event.preventDefault();
   this.props.location.pathname === "/registration"
-   ? this.props.registrationUserOperation({
-      email: this.state.email,
-      password: this.state.password,
-      name: this.state.name,
-     })
-   : this.props.loginUserOperation({
-      email: this.state.email,
-      password: this.state.password,
-     });
-  this.props.history.push("/login");
+   ? this.props.registrationUserOperation(
+      {
+       email: this.state.email,
+       password: this.state.password,
+       name: this.state.name,
+      },
+      this.props.history
+     )
+   : this.props.loginUserOperation(
+      {
+       email: this.state.email,
+       password: this.state.password,
+      },
+      this.props.history
+     );
+
   this.reset();
  };
 

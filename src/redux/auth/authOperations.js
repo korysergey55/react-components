@@ -12,22 +12,26 @@ import {
  logoutUserActionError,
 } from "./authActions";
 
-export const registrationUserOperation = (formState) => async (dispatch) => {
- try {
-  const response = await registrationUserApi(formState);
+export const registrationUserOperation =
+ (formState, history) => async (dispatch) => {
+  try {
+   const response = await registrationUserApi(formState);
+   dispatch(registerUserAction(response));
+   alert("You was secsesful Registrated. Login please");
+   history.push("/login");
+  }
+  catch (error) {
+   dispatch(registerUserActionError(error));
+  }
+ };
 
-  dispatch(registerUserAction(response));
-  alert("You was secsesful Registrated. Login please");
- } catch (error) {
-  dispatch(registerUserActionError(error));
- }
-};
-
-export const loginUserOperation = (formState) => async (dispatch) => {
+export const loginUserOperation = (formState,history) => async (dispatch) => {
  try {
   const response = await loginUserApi(formState);
-  dispatch(loginUserAction(response.data));
- } catch (error) {
+     dispatch(loginUserAction(response.data));
+     history.push("/formAdd");
+ }
+ catch (error) {
   dispatch(loginUserActionError(error));
  }
 };

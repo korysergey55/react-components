@@ -28,7 +28,7 @@ const Header = () => {
      {authToken && (
       <>
        <li className="nawLink" onClick={() => dispatch(logoutUserOperation())}>
-        <NavLink to="/home" className="NavLink">
+        <NavLink to="home" className="NavLink">
          <span className="userName">{user.name}</span>
          <Icon width="40" height="40" />
          <span>LogOut</span>
