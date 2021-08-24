@@ -13,10 +13,7 @@ class FormAdd extends Component {
   number: "",
  };
 
- componentDidMount() {
-  this.props.token && this.props.getAllContactsOperation();
- }
- saveInputValueToState = (evt) => {
+ handleChange = (evt) => {
   this.setState({
    [evt.target.name]: evt.target.value,
   });
@@ -56,7 +53,7 @@ class FormAdd extends Component {
      <div className="inputContainer">
       <label className="labelName">Name</label>
       <input
-       onChange={this.saveInputValueToState}
+       onChange={this.handleChange}
        type="text"
        name="name"
        value={this.state.name}
@@ -71,7 +68,7 @@ class FormAdd extends Component {
      <div className="inputContainer">
       <label className="labelName">Number</label>
       <input
-       onChange={this.saveInputValueToState}
+       onChange={this.handleChange}
        type="tel"
        name="number"
        value={this.state.number}
@@ -103,4 +100,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FormAdd);
-
