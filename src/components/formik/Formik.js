@@ -17,19 +17,15 @@ export const FormControl = ({ label, ...props }) => {
    </label>
 
    <input
-    name="formControl"
     id={id}
     className={meta.error && meta.touched ? styles.FormControlInput : ""}
     {...field}
     {...props}
    />
 
-   <ErrorMessage
-    name={field.name}
-    component="p"
-    className={styles.ErrorMessage}
-   />
-   {/* {meta.error && meta.touched && (<p className={styles.ErrorMessage}>{meta.error}</p>)} */}
+   {meta.error && meta.touched && (
+    <p className={styles.ErrorMessage}>{meta.error}</p>
+   )}
   </div>
  );
 };
@@ -39,13 +35,13 @@ const FormikComponent = () => {
  return (
   <div>
    <Formik
-    initialValues={{ email: "", password: "" }}
+    initialValues={{ email: "", password: "", tel: "" }}
     validationSchema={validShema}
     onSubmit={(value) => dispatch(getFormikValue(value))}
    >
     <Form>
-     {/* <FormControl label="label" /> */}
      <div className={styles.emailContainer}>
+      <FormControl name="tel" type="tel" label="FormControl" />
       <label className={styles.emailLabel}>email</label>
       <Field name="email" type="email" className={styles.emailField} />
       <ErrorMessage
