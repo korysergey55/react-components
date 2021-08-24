@@ -21,10 +21,10 @@ export const getFormAddContactApi = async (formState, token) => {
  }
 };
 
-export const getDeliteFormAddContactApi = async (contactId, token) => {
+export const getDeliteFormAddContactApi = async (id, token) => {
  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
  try {
-  const responce = await axios.delete(`${BASE_URL}/contacts/${contactId}`);
+  const responce = await axios.delete(`${BASE_URL}/contacts/${id}`);
   return responce;
  } catch (error) {
   console.log(error);

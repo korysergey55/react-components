@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { FormAddStyledContainer } from "./FormAddStuled";
 
 import { connect } from "react-redux";
-import { submitNewItem } from "../../redux/formAdd/FormAddActions";
 import {
  getAllContactsOperation,
  addNewContactOperation,
@@ -41,7 +40,6 @@ class FormAdd extends Component {
  handleSubmitForm = (evt) => {
   evt.preventDefault();
   if (this.findDuplicate(this.state.name)) {
-   //  this.props.submitNewItem({ ...this.state });
    this.props.addNewContactOperation({ ...this.state });
    this.resetForm();
   }
@@ -100,27 +98,9 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = {
- submitNewItem,
  getAllContactsOperation,
  addNewContactOperation,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FormAdd);
 
-//=================Withaut-Redax-App========================
-//  state = {
-//   newItems: [],
-//  };
-
-//  submitNewItem = (data) => {
-//   const newTodo = {
-//    name: data.name,
-//    number: data.number,
-//    id: uuid(),
-//   };
-
-//   this.setState((prevState) => {
-//    const newContact = [newTodo, ...prevState.newItems];
-//    return { newItems: newContact };
-//   });
-//  };

@@ -1,0 +1,13 @@
+.ErrorMessage {
+ color: red;
+}
+
+.meta.error {
+ border: 1px solid red;
+}
+.meta.touched {
+ border: 1px solid red;
+}
+.FormControlInput{
+     border: 1px solid red;
+}

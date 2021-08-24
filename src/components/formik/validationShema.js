@@ -1,4 +1,5 @@
 import * as Yup from "yup";
+
 export const validShema = Yup.object().shape({
  email: Yup.string()
   .required("Обязательное поле ввода")

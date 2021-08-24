@@ -6,6 +6,7 @@ import { getFormikValue, getFormikValueError } from "./FormikActions";
 const itemFormikReducer = createReducer(null, {
  [getFormikValue]: (state, action) => action.payload,
 });
+
 const itemFormikReducerError = createReducer(null, {
     [getFormikValueError] : (state, action) => action.payload,
     

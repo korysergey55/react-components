@@ -1,30 +1,38 @@
 import React from "react";
+import styles from "./FormikStyled.module.css";
 import { Formik, Form, Field, ErrorMessage, useField } from "formik";
-import { getFormikValue } from "../../redux/formik/FormikActions";
 import { useDispatch } from "react-redux";
-import { validShema } from "./validationShema";
 import { useMemo } from "react";
+import { validShema } from "./validationShema";
+import { getFormikValue } from "../../redux/formik/FormikActions";
 
 export const FormControl = ({ label, ...props }) => {
-    
  const id = useMemo(() => Math.floor(Math.random() * 99999).toString(), []);
  const [field, meta] = useField(props);
 
  return (
-  <div className="mt-3">
-   <label htmlFor={id}>{label}</label>
+  <div className={styles.FormControlContainer}>
+   <label className={styles.FormControlLabel} htmlFor={id}>
+    {label}
+   </label>
+
    <input
+    name="formControl"
     id={id}
-    className={meta.error && meta.touched ? "border border-1 text-red-500" : ""}
+    className={meta.error && meta.touched ? styles.FormControlInput : ""}
     {...field}
     {...props}
    />
-   {/*<ErrorMessage name={field.name} component="p" className="text-red-500" />*/}
-   {meta.error && meta.touched && <p className="text-red-500">{meta.error}</p>}
+
+   <ErrorMessage
+    name={field.name}
+    component="p"
+    className={styles.ErrorMessage}
+   />
+   {/* {meta.error && meta.touched && (<p className={styles.ErrorMessage}>{meta.error}</p>)} */}
   </div>
  );
 };
-
 
 const FormikComponent = () => {
  const dispatch = useDispatch();
@@ -36,17 +44,29 @@ const FormikComponent = () => {
     onSubmit={(value) => dispatch(getFormikValue(value))}
    >
     <Form>
-     <div>
-      <label>Enter-email</label>
-      <Field name="email" type="email" />
-      <ErrorMessage name="email" component="p" />
+     {/* <FormControl label="label" /> */}
+     <div className={styles.emailContainer}>
+      <label className={styles.emailLabel}>email</label>
+      <Field name="email" type="email" className={styles.emailField} />
+      <ErrorMessage
+       name="email"
+       component="p"
+       className={styles.ErrorMessage}
+      />
      </div>
-     <div>
-      <label>Enter-password</label>
-      <Field name="password" type="password" />
-      <ErrorMessage name="password" component="p" />
+     <div className={styles.passwordContainer}>
+      <label className={styles.passwordLabel}>password</label>
+      <Field name="password" type="password" className={styles.passwordField} />
+      <ErrorMessage
+       name="password"
+       component="p"
+       className={styles.ErrorMessage}
+      />
      </div>
-     <button type="submit">SentForm</button>
+
+     <button type="submit" className={styles.buttonSubmit}>
+      Register
+     </button>
     </Form>
    </Formik>
   </div>
