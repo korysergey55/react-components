@@ -15,7 +15,7 @@ class AuthForm extends Component {
   password: "",
   gender: "female",
   licence: true,
-  country: null,
+  country: '',
  };
 
  nameInputId = uuidv4();
@@ -150,7 +150,8 @@ class AuthForm extends Component {
         <option
          value={option.value}
          name={option.name}
-         checked={this.state.country === option.value}
+           checked={this.state.country === option.value}
+           key={ uuidv4()}
         >
          {option.countryName}
         </option>

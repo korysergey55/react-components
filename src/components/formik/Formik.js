@@ -6,14 +6,14 @@ import { useMemo } from "react";
 import { validShema } from "./validationShema";
 import { getFormikValue } from "../../redux/formik/FormikActions";
 
-export const FormControl = ({ label, ...props }) => {
+export const FormControl = (props) => {
  const id = useMemo(() => Math.floor(Math.random() * 99999).toString(), []);
  const [field, meta] = useField(props);
 
  return (
   <div className={styles.FormControlContainer}>
    <label className={styles.FormControlLabel} htmlFor={id}>
-    {label}
+    {props.label}
    </label>
 
    <input
@@ -38,6 +38,7 @@ const FormikComponent = () => {
     initialValues={{ email: "", password: "", tel: "" }}
     validationSchema={validShema}
     onSubmit={(value) => dispatch(getFormikValue(value))}
+    submitText="Register"
    >
     <Form>
      <div className={styles.emailContainer}>
